@@ -1,0 +1,12 @@
+<%= form_with(model: [@tweet, @comment], local: true, id: "new_comment") do |form| %> 
+  <%= form.text_area :text, placeholder: "コメントする" , rows: "2", class: "textbox" %>
+  <%= form.submit "SEND", class: "form__submit" %>
+<% end %>
+<div class ="contents row">
+  <div class="content_post" style="background-image: url(<%= @tweet.image %>);">
+    <div class="more">
+      <span><%= image_tag 'arrow_top.png' %></span>
+    </div>
+    <p><%= @tweet.text %></p>
+  </div>
+</div>
